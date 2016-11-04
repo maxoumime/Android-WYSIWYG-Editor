@@ -32,18 +32,16 @@
 
         <!-- Begin Editor toolbar -->
 
-        <HorizontalScrollView android:id="@+id/tools"
+        <com.github.irshulx.EditorToolbar
+            android:id="@+id/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#e6e6e6"
             android:layout_alignParentBottom="true"
-            android:scrollbars="none">
+            android:scrollbars="none"/>
 
-            <include layout="@layout/editor_toolbar_linearlayout_horizontal" />
-
-
-        </HorizontalScrollView>
         <!--End of Editor toolbar -->
+
         <ScrollView
             android:layout_width="match_parent"
             android:scrollbars="vertical"
@@ -62,6 +60,7 @@
                 android:paddingRight="20dp"
                 android:layout_height="wrap_content"
                 android:paddingBottom="100dp"
+                app:toolbar="@+id/tools"
                 >
 
             </com.github.irshulx.Editor>
