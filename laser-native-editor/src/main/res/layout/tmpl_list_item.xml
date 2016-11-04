@@ -8,8 +8,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="7dp"
         android:textStyle="bold"
-        android:text="•"></TextView>
-    <com.github.irshulx.Components.CustomEditText
+        android:text="•"/>
+    <com.github.maxoumime.component.CustomEditText
         android:layout_column="2"
         android:id="@+id/txtText"
         android:layout_weight="1"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:background="@drawable/invisible_edit_text"
-        android:textColor="@color/darkertext"></com.github.irshulx.Components.CustomEditText>
+        android:textColor="@color/darkertext"/>
 
     <TextView
         android:layout_column="2"
@@ -29,6 +29,6 @@
         android:textSize="14sp"
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
-        android:textColor="@color/darkertext"></TextView>
+        android:textColor="@color/darkertext"/>
 
 </TableRow>
