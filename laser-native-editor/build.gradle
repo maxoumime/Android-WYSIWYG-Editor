@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'laser-native-editor'
@@ -8,14 +10,14 @@ ext {
 
     libraryDescription = 'Android WYSIWYG is a text editor written in Android using the native components in the content tree. The library can be used as both Editor and Renderer. The HTML parser helps it easier to integrate with specific web WYSIWY'
 
-    siteUrl = 'http://irshulx.github.io/laser-native-editor'
-    gitUrl = 'https://github.com/irshuLx/laser-native-editor.git'
+    siteUrl = 'https://github.com/maxoumime/Basic-WYSIWYG-Editor'
+    gitUrl = 'https://github.com/maxoumime/Basic-WYSIWYG-Editor.git'
 
-    libraryVersion = '0.3.8'
+    libraryVersion = '1.0.0'
 
     developerId = 'maxoumime'
     developerName = 'Maxime Bertheau'
-    developerEmail = 'irshu@outlook.com'
+    developerEmail = 'maxime.bertheau@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -47,13 +49,12 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'org.jsoup:jsoup:1.8.1'
-//    compile 'com.google.code.gson:gson:2.3.1'
-//    compile 'com.squareup.picasso:picasso:2.5.2'
-//    compile 'com.squareup.retrofit2:retrofit:2.0.2'
-//    compile 'com.google.android.gms:play-services-maps:8.4.0'
-//    compile 'com.google.android.gms:play-services-location:8.4.0'
-//    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
 }
 
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

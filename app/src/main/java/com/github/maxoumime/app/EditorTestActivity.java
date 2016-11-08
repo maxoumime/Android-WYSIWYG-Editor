@@ -1,15 +1,10 @@
 package com.github.maxoumime.app;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +12,6 @@ import android.widget.Toast;
 
 import com.github.maxoumime.Editor;
 import com.github.maxoumime.EditorToolbar;
-
-import java.io.IOException;
 
 public class EditorTestActivity extends AppCompatActivity {
     Editor _editor;
@@ -30,12 +23,12 @@ public class EditorTestActivity extends AppCompatActivity {
         _editor= (Editor) findViewById(R.id.editor);
 
         _editor.setOptions(
-                EditorToolbar.TOOLBAR_OPTION.BOLD,
-                EditorToolbar.TOOLBAR_OPTION.ITALIC,
-                EditorToolbar.TOOLBAR_OPTION.HR,
-                EditorToolbar.TOOLBAR_OPTION.UNORDERED_NUMBERED,
-                EditorToolbar.TOOLBAR_OPTION.BULLETED
-            );
+            EditorToolbar.TOOLBAR_OPTION.BOLD,
+            EditorToolbar.TOOLBAR_OPTION.ITALIC,
+            EditorToolbar.TOOLBAR_OPTION.HR,
+            EditorToolbar.TOOLBAR_OPTION.UNORDERED_NUMBERED,
+            EditorToolbar.TOOLBAR_OPTION.BULLETED
+        );
 
         _editor.Render();
 
